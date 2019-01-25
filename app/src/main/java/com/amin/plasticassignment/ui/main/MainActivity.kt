@@ -1,7 +1,8 @@
-package com.amin.plasticassignment
+package com.amin.plasticassignment.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.amin.plasticassignment.R
 
 class MainActivity : AppCompatActivity() {
 
