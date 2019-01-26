@@ -8,4 +8,7 @@ object Constants {
 
     // for web names
     const val BASE_URL = "https://dateandtimeasjson.appspot.com/"
+
+    // Volley
+    const val VOLLEY_TIME_OUT = 50000
 }

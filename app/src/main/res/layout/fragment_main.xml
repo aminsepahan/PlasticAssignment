@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
              android:layout_width="match_parent" android:layout_height="match_parent"
              tools:context=".ui.main.MainFragment">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
+            android:id="@+id/root"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" tools:ignore="UselessParent">
 
+        <View android:layout_width="match_parent" android:layout_height="200dp"
+              android:layout_alignParentBottom="true"
+              android:id="@+id/grayArea"
+              android:layout_marginStart="20dp"
+              android:layout_marginBottom="-180dp"
+              android:layout_marginEnd="20dp"
+              android:background="@color/md_grey_300"/>
 
         <TextView
                 android:text="@string/time_is_loading"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@color/md_light_green_100"
-                android:textColor="@color/md_blue_grey_800"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@color/md_red_400"
+                android:textColor="@color/md_grey_300"
+                android:textStyle="bold"
                 android:gravity="center"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                android:id="@+id/timeTv" app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintVertical_bias="0.256"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_marginTop="100dp"
+                android:id="@+id/timeTv"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp"
+                  android:textSize="12dp"
+                  android:id="@+id/coordinates" tools:ignore="SpUsage"/>
+    </RelativeLayout>
+
 
 </FrameLayout>
